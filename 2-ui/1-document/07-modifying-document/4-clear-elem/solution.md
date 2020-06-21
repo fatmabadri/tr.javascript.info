@@ -1,5 +1,5 @@
 
-First, let's see how *not* to do it:
+İlk olarak, onun nasıl *yapılmadığını* görelim:
 
 ```js
 function clear(elem) {
@@ -9,11 +9,10 @@ function clear(elem) {
 }
 ```
 
-That won't work, because the call to `remove()` shifts the collection `elem.childNodes`, so elements start from the index `0` every time. But `i` increases, and some elements will be skipped.
+O calışmayacak, çünkü `remove()` çağrısı `elem.childNodes` koleksiyonunu kaydırır, bu yüzden elementler her zaman "0"(sıfır) dizininden başlar. Ama `i` artar, ve bazi elemetler atlanmis olur. 
 
-The `for..of` loop also does the same.
-
-The right variant could be:
+`for..of` ilmegi(loop) de aynısını yapar.
+Doğru degişken(variant) şöyle olabilir :
 
 ```js
 function clear(elem) {
@@ -23,7 +22,7 @@ function clear(elem) {
 }
 ```
 
-And also there's a simpler way to do the same:
+Ve aynısını yapmanın daha basit bir yolu da var:
 
 ```js
 function clear(elem) {
